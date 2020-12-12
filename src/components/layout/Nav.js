@@ -38,7 +38,7 @@ const Nav = () => {
                     <li>
                         <Link
                             activeClass="active"
-                            to="o-nas"
+                            to="about-us"
                             spy={true}
                             smooth={true}
                             offset={0}

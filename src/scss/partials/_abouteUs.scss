@@ -1,0 +1,32 @@
+.about-us__wrapper {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+.about-us__info {
+background: $color-light;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-us__title {
+  font-size: 2.375rem;
+  margin: 175px 0 25px 0 ;
+}
+
+.about-us__description {
+  text-align: center;
+  width: 655px;
+  margin: 55px 0 40px 0;
+}
+
+.about-us__signature{
+  align-self: flex-end;
+  margin-right: 40px;
+}
+
+.about-us__graphic {
+  overflow: hidden;
+}
+

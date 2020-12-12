@@ -7,6 +7,7 @@ import GiveAway from "./giveAway";
 
 
 
+
 const WhatsUp = () => {
     return (
 
@@ -15,6 +16,7 @@ const WhatsUp = () => {
             <ForSteps/>
             <WhatToDo/>
             <GiveAway/>
+
         </>
     )
 }
