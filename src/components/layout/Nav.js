@@ -4,6 +4,7 @@ import SignInLinks from "./SignInLinks";
 import { Link } from "react-scroll";
 
 
+
 const Nav = () => {
     return (
         <div className="nav-wrapper">
@@ -18,7 +19,7 @@ const Nav = () => {
                             spy={true}
                             smooth={true}
                             offset={0}
-                            duration={500}
+                            duration={300}
                             className="current"
                         >Start</Link>
                     </li>
@@ -29,7 +30,7 @@ const Nav = () => {
                             spy={true}
                             smooth={true}
                             offset={0}
-                            duration={500}
+                            duration={300}
                             className=""
                         >
                             O co chodzi?
@@ -42,7 +43,7 @@ const Nav = () => {
                             spy={true}
                             smooth={true}
                             offset={0}
-                            duration={500}
+                            duration={300}
                             className=""
                         >
                             O nas
@@ -55,7 +56,7 @@ const Nav = () => {
                             spy={true}
                             smooth={true}
                             offset={0}
-                            duration={500}
+                            duration={300}
                             className=""
                         >
                             Fundacje i organizacje
