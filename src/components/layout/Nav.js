@@ -7,8 +7,8 @@ import { Link } from "react-scroll";
 const Nav = () => {
     return (
         <div className="nav-wrapper">
-            {/*<SignOutLinks/>*/}
-            <SignInLinks />
+            <SignOutLinks/>
+            {/*<SignInLinks />*/}
             <div className="site-nav">
                 <ul>
                     <li>
