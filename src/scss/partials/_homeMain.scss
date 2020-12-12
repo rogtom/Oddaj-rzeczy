@@ -1,0 +1,48 @@
+.main-wrapper {
+  display: flex;
+
+}
+
+.main-bg {
+  width: 885px;
+  //max-width: 885px;
+  height: 963px;
+  //max-height: 963px;
+  object-fit: none;
+  object-position: bottom right;
+
+
+}
+
+.main-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  object-position: left;
+
+}
+
+.main-content__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    font-size: 2.375rem;
+    line-height: 3.438rem;
+  }
+}
+.main-content__decoration {
+  //background: url("../../assets/Decoration.svg");
+  width: 253px;
+  height: 33px;
+  margin: 20px 0;
+}
+
+.main-content__btn-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
