@@ -1,0 +1,19 @@
+.for-steps__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+
+  .for-steps__title {
+    font-size: 2.375rem;
+    line-height: 55px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+  }
+
+  .for-steps__decoration {
+    margin-bottom: 35px;
+  }
+}
+
