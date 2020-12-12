@@ -35,7 +35,7 @@
   }
 }
 .main-content__decoration {
-  //background: url("../../assets/Decoration.svg");
+
   width: 253px;
   height: 33px;
   margin: 20px 0;
@@ -43,6 +43,11 @@
 
 .main-content__btn-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   width: 100%;
+  max-width: 80%;
+
+  .big-btn {
+    color: $color-dark;
+  }
 }
