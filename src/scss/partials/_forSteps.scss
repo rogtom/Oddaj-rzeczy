@@ -1,3 +1,7 @@
+.whats-up__wrapper {
+  height: 100vh;
+}
+
 .for-steps__wrapper {
   display: flex;
   flex-direction: column;
@@ -8,8 +12,8 @@
   .for-steps__title {
     font-size: 2.375rem;
     line-height: 55px;
-    margin-top: 25px;
-    margin-bottom: 20px;
+    margin-top: 35px;
+    margin-bottom: 30px;
   }
 
   .for-steps__decoration {

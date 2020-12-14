@@ -1,14 +1,66 @@
 .contact__wrapper {
   display: grid;
   grid-template-columns: 60% 40%;
+  height: 100vh;
   position: relative;
 
   .contact__bg {
-    background: url("../../assets/Background-Contact-Form.jpg");
-    height: 1000px;
-    //object-fit: cover;
-    //object-position: center;
+    background: url("../../assets/Background-Contact-Form.jpg") no-repeat bottom left/cover ;
+    opacity: 20%;
+    height: 100%;
 
+
+
+    //position: relative;
+  }
+
+  .contact__form-wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .contact__title {
+      font-size: 2.375rem;
+      margin-bottom: 25px;
+    }
+  }
+  .contact__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact__inputs-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-top: 70px;
+
+  }
+  label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+
+  }
+
+  .contact--name {
+    margin-right: 15px;
+  }
+
+  .contact__message {
+    margin: 40px 0;
+    width: 100%;
+  }
+  input, textarea {
+    border: none;
+    border-bottom: 1px solid $color-dark;
+    padding-top: 20px;
+  }
+  button {
+
+    align-self: flex-end;
   }
 }
 

@@ -3,8 +3,10 @@
   align-items: center;
   justify-content: space-between;
   font-size: 1.125rem;
-
   padding: 20px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 
   .footer__title {
     margin-left: 50%;

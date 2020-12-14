@@ -1,6 +1,7 @@
 .about-us__wrapper {
   display: grid;
   grid-template-columns: 40% 60%;
+  height: 100vh;
 }
 .about-us__info {
 background: $color-light;
@@ -8,6 +9,7 @@ background: $color-light;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
 }
 
 .about-us__title {
@@ -28,5 +30,10 @@ background: $color-light;
 
 .about-us__graphic {
   overflow: hidden;
+
+  .about-us__img {
+    height: 100%;
+  }
+
 }
 

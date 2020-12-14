@@ -30,7 +30,7 @@ const Nav = () => {
                             spy={true}
                             smooth={true}
                             offset={0}
-                            duration={300}
+                            duration={500}
                             className=""
                         >
                             O co chodzi?
@@ -43,7 +43,7 @@ const Nav = () => {
                             spy={true}
                             smooth={true}
                             offset={0}
-                            duration={300}
+                            duration={500}
                             className=""
                         >
                             O nas
@@ -52,11 +52,11 @@ const Nav = () => {
                     <li>
                         <Link
                             activeClass="active"
-                            to="Fundacje"
+                            to="whoGetHelp"
                             spy={true}
                             smooth={true}
                             offset={0}
-                            duration={300}
+                            duration={500}
                             className=""
                         >
                             Fundacje i organizacje
@@ -65,7 +65,7 @@ const Nav = () => {
                     <li>
                         <Link
                             activeClass="active"
-                            to="Kontakt"
+                            to="contact"
                             spy={true}
                             smooth={true}
                             offset={0}

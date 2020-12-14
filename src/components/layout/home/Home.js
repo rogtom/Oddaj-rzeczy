@@ -18,7 +18,7 @@ const Home = () => {
             <AboutUs/>
             <WhoGetHelp/>
             <Contact/>
-            <Footer/>
+
 
 
             <ScrollToTop/>

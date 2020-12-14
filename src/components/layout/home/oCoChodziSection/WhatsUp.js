@@ -11,13 +11,13 @@ import GiveAway from "./giveAway";
 const WhatsUp = () => {
     return (
 
-        <>
+        <div className={"whats-up__wrapper"}>
             <Statistics/>
             <ForSteps/>
             <WhatToDo/>
             <GiveAway/>
 
-        </>
+        </div>
     )
 }
 export default WhatsUp

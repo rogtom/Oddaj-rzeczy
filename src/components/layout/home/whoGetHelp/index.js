@@ -11,7 +11,7 @@ import WhoGetHelpBtns from "./WhoGetHelpBtns";
 const WhoGetHelp = () => {
     return (
         <Router>
-            <div className="who-get-help__wrapper">
+            <div className="who-get-help__wrapper" id={'whoGetHelp'}>
                 <h2 className="who-get-help__title">Komu pomagamy?</h2>
                 <Decoration className="who-get-help__decoration"/>
                 <WhoGetHelpBtns/>

@@ -6,6 +6,7 @@ const STYLES = [
 ]
 
 const SIZE = [
+    'btn__small',
     'btn__medium',
     'btn__big'
 ]
