@@ -6,6 +6,7 @@ import Header from "./components/layout/Header";
 import SignIn from "./components/layout/SignIn";
 import SignUp from "./components/layout/SignUp";
 import SignOut from "./components/layout/SignOut";
+import Footer from "./components/layout/home/Footer";
 
 
 const App = () => {
@@ -15,11 +16,10 @@ const App = () => {
             <Header/>
 
             <Switch>
-                <Route exact path={ROUTES.HOME} component={Home} />
+                <Route exact path={ROUTES.HOME} component={Home}/>
                 <Route path={ROUTES.SIGN_IN} component={SignIn}/>
                 <Route path={ROUTES.SIGN_UP} component={SignUp}/>
                 <Route path={ROUTES.SIGN_OUT} component={SignOut}/>
-
             </Switch>
 
         </Router>

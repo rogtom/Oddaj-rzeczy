@@ -1,0 +1,14 @@
+.contact__wrapper {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  position: relative;
+
+  .contact__bg {
+    background: url("../../assets/Background-Contact-Form.jpg");
+    height: 1000px;
+    //object-fit: cover;
+    //object-position: center;
+
+  }
+}
+
