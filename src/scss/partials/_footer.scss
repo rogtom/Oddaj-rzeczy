@@ -1,0 +1,19 @@
+.footer__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.125rem;
+
+  padding: 20px 0;
+
+  .footer__title {
+    margin-left: 50%;
+    transform: translate(-50%);
+  }
+
+  .footer__media {
+justify-self: flex-end;
+    margin-right:70px;
+
+  }
+}
