@@ -1,14 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import {ReactComponent as Decoration} from '../../../../assets/Decoration.svg'
-import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route, Link, Redirect} from "react-router-dom";
 import * as ROUTES from "../../../../constants/routes";
+import { connect } from 'react-redux'
 import Foundations from "./Foundations";
 import Organizations from "./Organizations";
 import Locals from "./Local";
 import WhoGetHelpBtns from "./WhoGetHelpBtns";
+import LocalCharity from "./Local";
 
 
-const WhoGetHelp = () => {
+const WhoGetHelp = (props) => {
+
+    const [isActive, setIsActiv] = useState(true)
     return (
         <Router>
             <div className="who-get-help__wrapper" id={'whoGetHelp'}>
@@ -18,13 +22,19 @@ const WhoGetHelp = () => {
 
 
                 <Switch>
-                    <Route exact={true} path={ROUTES.FOUNDATIONS} component={Foundations}/>
-                    <Route path={ROUTES.ORGANIZATIONS} component={Organizations}/>
-                    <Route path={ROUTES.LOCALS} component={Locals}/>
-                </Switch>
+                    <Route exact path={ROUTES.HOME} render={() => isActive && <Redirect to={ROUTES.FOUNDATIONS}/>}/>
+                    <Route path={ROUTES.FOUNDATIONS} render={() => <Foundations charities={props}/>}/>
+                    <Route path={ROUTES.ORGANIZATIONS} render={() => <Organizations charities={props}/>}/>
+                    <Route path={ROUTES.LOCALS} render={() => <LocalCharity charities={props}/>}/>
 
+
+                </Switch>
             </div>
         </Router>
     )
 }
-export default WhoGetHelp
+const mapStateToProps = (state) => ({
+    charities: state.charity.charityList
+})
+
+export default connect(mapStateToProps)(WhoGetHelp)

@@ -3,58 +3,12 @@ import ReactPaginate from 'react-paginate';
 
 import WhoGetHelpCard from "./WhoGetHelpCard";
 
-const foundationsList = [
-    {
-        name: 'Fundacja “Dbam o Zdrowie1”',
-        mission: 'Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.',
-        stuff: 'ubrania, jedzenie, sprzęt AGD, meble, zabawki',
-    },
-    {
-        name: 'Fundacja “Dla dzieci”',
-        mission: 'Cel i misja: Pomoc dzieciom z ubogich rodzin.',
-        stuff: 'ubrania, meble, zabawki',
-    },
-    {
-        name: 'Fundacja “Bez domu”',
-        mission: 'Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.',
-        stuff: 'ubrania, jedzenie, ciepłe koce',
-    },
-    {
-        name: 'Fundacja “Dbam o Zdrowie2”',
-        mission: 'Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.',
-        stuff: 'ubrania, jedzenie, sprzęt AGD, meble, zabawki',
-    },
-    {
-        name: 'Fundacja “Dla dzieci”',
-        mission: 'Cel i misja: Pomoc dzieciom z ubogich rodzin.',
-        stuff: 'ubrania, meble, zabawki',
-    },
-    {
-        name: 'Fundacja “Bez domu”',
-        mission: 'Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.',
-        stuff: 'ubrania, jedzenie, ciepłe koce',
-    },
-    {
-        name: 'Fundacja “Dbam o Zdrowie3”',
-        mission: 'Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.',
-        stuff: 'ubrania, jedzenie, sprzęt AGD, meble, zabawki',
-    },
-    {
-        name: 'Fundacja “Dla dzieci”',
-        mission: 'Cel i misja: Pomoc dzieciom z ubogich rodzin.',
-        stuff: 'ubrania, meble, zabawki',
-    },
-    {
-        name: 'Fundacja “Bez domu”',
-        mission: 'Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.',
-        stuff: 'ubrania, jedzenie, ciepłe koce',
-    },
-]
 
-const Foundations = () => {
+const Foundations = ({charities}) => {
+    console.log(charities.charities)
 
     const [pagination, setPagination] = useState({
-        data: foundationsList,
+        data: charities.charities.foundations.foundationsList,
         offset: 0,
         numberPerPage: 3,
         pageCount: 0,

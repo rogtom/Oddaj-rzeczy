@@ -10,6 +10,7 @@ import Footer from "./components/layout/home/Footer";
 
 
 const App = () => {
+
     return (
         <Router>
 

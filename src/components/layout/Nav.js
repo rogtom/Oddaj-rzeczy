@@ -2,7 +2,8 @@ import React from "react";
 import SignOutLinks from "./SignOutLinks";
 import SignInLinks from "./SignInLinks";
 import { Link } from "react-scroll";
-
+import { NavLink } from "react-router-dom";
+import * as ROUTES from '../../constants/routes'
 
 
 const Nav = () => {
@@ -13,7 +14,7 @@ const Nav = () => {
             <div className="site-nav">
                 <ul>
                     <li>
-                        <Link
+                            <Link
                             activeClass="active"
                             to="home"
                             spy={true}
@@ -40,7 +41,6 @@ const Nav = () => {
                         <Link
                             activeClass="active"
                             to="about-us"
-                            spy={true}
                             smooth={true}
                             offset={0}
                             duration={500}

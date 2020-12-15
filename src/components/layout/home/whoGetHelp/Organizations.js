@@ -1,66 +1,66 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import WhoGetHelpCard from "./WhoGetHelpCard";
+import ReactPaginate from "react-paginate";
 
-const organizationList = [
-    {
-        name: 'Fundacja “Dbam o Zdrowie”',
-        mission: 'Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.',
-        stuff: 'ubrania, jedzenie, sprzęt AGD, meble, zabawki',
-    },
-    {
-        name: 'Fundacja “Dla dzieci”',
-        mission: 'Cel i misja: Pomoc dzieciom z ubogich rodzin.',
-        stuff: 'ubrania, meble, zabawki',
-    },
-    {
-        name: 'Fundacja “Bez domu”',
-        mission: 'Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.',
-        stuff: 'ubrania, jedzenie, ciepłe koce',
-    },
-    {
-        name: 'Fundacja “Dbam o Zdrowie”',
-        mission: 'Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.',
-        stuff: 'ubrania, jedzenie, sprzęt AGD, meble, zabawki',
-    },
-    {
-        name: 'Fundacja “Dla dzieci”',
-        mission: 'Cel i misja: Pomoc dzieciom z ubogich rodzin.',
-        stuff: 'ubrania, meble, zabawki',
-    },
-    {
-        name: 'Fundacja “Bez domu”',
-        mission: 'Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.',
-        stuff: 'ubrania, jedzenie, ciepłe koce',
-    },
-    {
-        name: 'Fundacja “Dbam o Zdrowie”',
-        mission: 'Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.',
-        stuff: 'ubrania, jedzenie, sprzęt AGD, meble, zabawki',
-    },
-    {
-        name: 'Fundacja “Dla dzieci”',
-        mission: 'Cel i misja: Pomoc dzieciom z ubogich rodzin.',
-        stuff: 'ubrania, meble, zabawki',
-    },
-    {
-        name: 'Fundacja “Bez domu”',
-        mission: 'Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.',
-        stuff: 'ubrania, jedzenie, ciepłe koce',
-    },
-]
 
-const Organizations = () => {
+const Organizations = ({charities}) => {
+
+    const [pagination, setPagination] = useState({
+        data: charities.charities.organizations.organizationList,
+        offset: 0,
+        numberPerPage: 3,
+        pageCount: 0,
+        currentData: [],
+    });
+
+    const handlePageClick = event => {
+        const selected = event.selected;
+        const offset = selected * pagination.numberPerPage
+        setPagination({ ...pagination, offset })
+    }
+
+    useEffect(() => {
+        setPagination((prevState) => ({
+            ...prevState,
+            pageCount: prevState.data.length / prevState.numberPerPage,
+            currentData: prevState.data.slice(pagination.offset, pagination.offset + pagination.numberPerPage)
+
+        }))
+
+
+    }, [pagination.data, pagination.numberPerPage, pagination.offset])
+
     return (
         <>
-            <h4 className="foundations__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi aspernatur autem commodi consequuntur cupiditate, deleniti dolorem doloribus ducimus eveniet, explicabo fuga in ipsum itaque magni neque placeat porro repellendus saepe suscipit ut vel vitae voluptatum? Corporis fugiat minus modi possimus rem sit! Commodi, deleniti doloribus eum id minus reprehenderit!</h4>
+            <h4 className="foundations__description">W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi
+                współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.</h4>
             <ul>
-                {organizationList?.map((organization, i) => (<WhoGetHelpCard
+                {pagination.currentData?.map((foundation, i) => (<WhoGetHelpCard
                     key={i}
-                    title={organization.name}
-                    mission={organization.mission}
-                    stuff={organization.stuff}/>))}
+                    title={foundation.name}
+                    mission={foundation.mission}
+                    stuff={foundation.stuff}/>))}
             </ul>
+
+            <ReactPaginate
+                previousLabel={'previous'}
+                nextLabel={'next'}
+                breakLabel={'...'}
+                pageCount={pagination.pageCount}
+                marginPagesDisplayed={2}
+                pageRangeDisplayed={5}
+                onPageChange={handlePageClick}
+                containerClassName={'pagination'}
+                pageClassName={'page'}
+                activeClassName={'active'}
+                previousClassName={'prev'}
+                nextClassName={'next'}
+                pageClassName={'page'}
+            />
+
+
         </>
     )
+
 }
 export default Organizations

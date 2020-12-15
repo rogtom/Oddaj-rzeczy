@@ -1,5 +1,5 @@
 // import React, { useState, useEffect } from "react";
-// import { charityList } from "./charityList";
+// import { charityReducer } from "./charityReducer";
 // import {ReactComponent as Decoration} from '../../../../assets/Decoration.svg'
 // import WhoGetHelpBtns from "./WhoGetHelpBtns";
 //
@@ -10,11 +10,7 @@
 //
 // const WhoGetHelp = () => {
 //
-//     const [objectList, setObjectList] = useState({charityList})
 //
-//     const handlwClick = (name) => {
-//
-//     }
 //
 //     return (
 //         <>

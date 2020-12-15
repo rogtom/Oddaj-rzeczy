@@ -4,6 +4,7 @@ import * as ROUTES from '../../../../constants/routes'
 import Buttons from "../../Buttons";
 
 const WhoGetHelpBtns =() => {
+
     return (
         <div className="who-get-help-btns__wrapper">
             <Link to={ROUTES.FOUNDATIONS}><Buttons text1={'Fundacjom'} buttonSize={"btn__medium"} o/></Link>
