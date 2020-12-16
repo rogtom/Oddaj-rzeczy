@@ -4,6 +4,8 @@ import SignInLinks from "./SignInLinks";
 import { Link } from "react-scroll";
 import { NavLink } from "react-router-dom";
 import * as ROUTES from '../../constants/routes'
+import { connect } from 'react-redux'
+
 
 
 const Nav = () => {
@@ -82,4 +84,12 @@ const Nav = () => {
         </div>
     )
 }
-export default Nav
+
+const mapStateToProps = (state) => {
+    console.log(state)
+    return {
+
+    }
+}
+
+export default connect(mapStateToProps)(Nav)

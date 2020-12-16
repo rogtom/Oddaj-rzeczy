@@ -7,7 +7,7 @@ import SignIn from "./components/layout/SignIn";
 import SignUp from "./components/layout/SignUp";
 import SignOut from "./components/layout/SignOut";
 import Footer from "./components/layout/home/Footer";
-import GiveAwayFormMain from "./components/giveAwayForm/giveAwayFormMain";
+import GiveAwayFormMain from "./components/layout/giveAwayForm/giveAwayFormMain";
 
 
 const App = () => {
