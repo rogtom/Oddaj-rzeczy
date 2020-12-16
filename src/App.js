@@ -7,6 +7,7 @@ import SignIn from "./components/layout/SignIn";
 import SignUp from "./components/layout/SignUp";
 import SignOut from "./components/layout/SignOut";
 import Footer from "./components/layout/home/Footer";
+import GiveAwayFormMain from "./components/giveAwayForm/giveAwayFormMain";
 
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
                 <Route path={ROUTES.SIGN_IN} component={SignIn}/>
                 <Route path={ROUTES.SIGN_UP} component={SignUp}/>
                 <Route path={ROUTES.SIGN_OUT} component={SignOut}/>
+                <Route path={ROUTES.FORM_MAIN} component={GiveAwayFormMain}/>
             </Switch>
 
         </Router>

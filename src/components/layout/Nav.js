@@ -10,7 +10,7 @@ const Nav = () => {
     return (
         <div className="nav-wrapper">
             <SignOutLinks/>
-            {/*<SignInLinks />*/}
+            <SignInLinks />
             <div className="site-nav">
                 <ul>
                     <li>
