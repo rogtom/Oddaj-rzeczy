@@ -3,10 +3,13 @@ import {ReactComponent as Decoration} from '../../assets/Decoration.svg'
 import {Link} from "react-router-dom";
 import * as ROUTES from "../../constants/routes";
 import {useFormik} from "formik";
-import * as Yup from 'yup'
+import * as Yup from 'yup';
 import FormInput from "./FormImput";
+import {connect} from 'react-redux';
+import {signIn} from '../store/actions/authAction';
 
-const SignIn = () => {
+const SignIn = (props) => {
+
 
     const {handleSubmit, handleChange, values, touched, errors, handleBlur} = useFormik({
         initialValues: {
@@ -17,8 +20,11 @@ const SignIn = () => {
             email: Yup.string().email().required(),
             password: Yup.string().min(6, 'Password should be longer than 6 characters').required()
         }),
-        onSubmit: ({email, password}) => {
-            alert(`Login: ${email}, password: ${password}`);
+        onSubmit: () => {
+            console.log(values);
+            // alert(`Login: ${email}, password: ${password}`);
+            props.signIn(values)
+
         }
     })
 
@@ -28,7 +34,7 @@ const SignIn = () => {
             <h1 className="sign-in__title">Zaloguj się</h1>
             <Decoration className="sign-in__decoration"/>
             <form onSubmit={handleSubmit}>
-                <div className="sign-in__form" ><FormInput
+                <div className="sign-in__form"><FormInput
                     id="email"
                     type="email"
                     name="email"
@@ -65,4 +71,11 @@ const SignIn = () => {
         </div>
     )
 }
-export default SignIn;
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        signIn: (credentials) => dispatch(signIn(credentials))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(SignIn);
