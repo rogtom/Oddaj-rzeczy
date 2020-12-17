@@ -5,20 +5,26 @@ import {useFormik} from "formik";
 import * as Yup from "yup";
 import FormInput from "./FormImput";
 import React from "react";
+import {signUp} from '../store/actions/authAction'
+import {connect} from 'react-redux';
 
-const SignUp = () => {
+const SignUp = (props) => {
+    console.log(props);
 
     const {handleSubmit, handleChange, values, touched, errors, handleBlur} = useFormik({
         initialValues: {
             email: '',
-            password: ''
+            password1: '',
+            password2: ''
         },
         validationSchema: Yup.object({
             email: Yup.string().email().required(),
             password: Yup.string().min(6, 'Password should be longer than 6 characters').required()
         }),
-        onSubmit: ({email, password}) => {
-            alert(`Login: ${email}, password: ${password}`);
+        onSubmit: () => {
+            console.log(values);
+            alert(`Login: ${values.email}, password: ${values.password1}`);
+
         }
     })
 
@@ -41,25 +47,25 @@ const SignUp = () => {
 
                 />
                     <FormInput
-                        id="password"
+                        id="password1"
                         type="password"
-                        name="password"
+                        name="password1"
                         label="Hasło"
-                        value={values.password}
-                        touched={touched.password}
-                        error={errors.password}
+                        value={values.password1}
+                        touched={touched.password1}
+                        error={errors.password1}
                         handleBlur={handleBlur}
                         handleChange={handleChange}
 
                     />
                     <FormInput
-                        id="password"
+                        id="password2"
                         type="password"
-                        name="password"
+                        name="password2"
                         label="Powtórz hasło"
-                        value={values.password}
-                        touched={touched.password}
-                        error={errors.password}
+                        value={values.password2}
+                        touched={touched.password2}
+                        error={errors.password2}
                         handleBlur={handleBlur}
                         handleChange={handleChange}
 
@@ -77,24 +83,14 @@ const SignUp = () => {
         </div>
     )
 
-    // return (
-    //     <div className="sign-in__wrapper">
-    //         <h1 className="sign-in__title">Załóż konto</h1>
-    //         <Decoration className="sign-in__decoration"/>
-    //         <form className="sign-in__form">
-    //             <label htmlFor="">Email</label>
-    //             <input type="email" name={'email'}/>
-    //             <label htmlFor="">Hasło</label>
-    //             <input type="password" name={'password'}/>
-    //             <label htmlFor="">Powtórz hasło</label>
-    //             <input type="password" name={'password'}/>
-    //
-    //         </form>
-    //         <div className="sign-in__form__btn-wrapper">
-    //             <Link to={ROUTES.SIGN_IN}>Zaloguj się</Link>
-    //             <button type={"submit"}>Załóż konto</button>
-    //         </div>
-    //     </div>
-    // )
+
 }
-export default SignUp;
+
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        signUp: (credentials) => dispatch(signUp(credentials))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(SignUp);

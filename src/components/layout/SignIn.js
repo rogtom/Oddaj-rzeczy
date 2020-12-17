@@ -21,8 +21,8 @@ const SignIn = (props) => {
             password: Yup.string().min(6, 'Password should be longer than 6 characters').required()
         }),
         onSubmit: () => {
-            console.log(values);
-            // alert(`Login: ${email}, password: ${password}`);
+            // console.log(values);
+            // alert(`Login: ${values.email}, password: ${values.password}`);
             props.signIn(values)
 
         }
