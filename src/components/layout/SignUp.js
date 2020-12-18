@@ -9,7 +9,7 @@ import {signUp} from '../store/actions/authAction'
 import {connect} from 'react-redux';
 
 const SignUp = (props) => {
-    console.log(props);
+    // console.log(props);
 
     const {handleSubmit, handleChange, values, touched, errors, handleBlur} = useFormik({
         initialValues: {
@@ -19,21 +19,26 @@ const SignUp = (props) => {
         },
         validationSchema: Yup.object({
             email: Yup.string().email().required(),
-            password: Yup.string().min(6, 'Password should be longer than 6 characters').required()
+            password1: Yup.string().min(6, 'Password should be longer than 6 characters').required(),
+            password2: Yup.string().min(6, 'Password should be longer than 6 characters').required()
         }),
-        onSubmit: () => {
+        onSubmit: values => {
+            props.signUp(values);
             console.log(values);
-            alert(`Login: ${values.email}, password: ${values.password1}`);
-
         }
-    })
 
+        })
 
+    // const handleSubmitt= (e) => {
+    //     e.preventDefault();
+    //     console.log(values)
+    //     e.target.reset();
+    // }
     return (
         <div className="sign-in__wrapper">
             <h1 className="sign-in__title">Zaloguj się</h1>
             <Decoration className="sign-in__decoration"/>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} >
                 <div className="sign-in__form"><FormInput
                     id="email"
                     type="email"

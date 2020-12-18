@@ -3,7 +3,7 @@ import {ReactComponent as Decoration} from '../../assets/Decoration.svg'
 import {Link} from "react-router-dom";
 import * as ROUTES from "../../constants/routes";
 
-const SignIn = () => {
+const SignOut = () => {
     return (
         <div className="sign-in__wrapper">
             <h1 className="sign-in__title">Wylogowanie nastąpiło pomyślnie!</h1>
@@ -16,4 +16,4 @@ const SignIn = () => {
         </div>
     )
 }
-export default SignIn;
+export default SignOut;
