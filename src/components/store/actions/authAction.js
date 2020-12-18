@@ -56,12 +56,18 @@ export const signUp = (credentials) => {
         firebase.auth().createUserWithEmailAndPassword(
             credentials.email,
             credentials.password1
+        )
+            .then(() => firebase.updateProfile({
+                user: credentials.email,
+                createdAt: firebase.firestore.FieldValue.serverTimestamp()
+            })
+                .then(() => {
+                    dispatch({type: 'SIGNUP_SUCCESS'})
+                })
+                .catch(error => {
+                    dispatch({type: 'SIGNUP_ERROR', error})
+                })
             )
-            .then(() => {
-                dispatch({type: 'SIGNUP_SUCCESS'})
-            }).catch(error => {
-            dispatch({type: 'SIGNUP_ERROR', error})
-        })
 
     }
 
