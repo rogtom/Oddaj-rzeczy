@@ -2,15 +2,20 @@ import React from "react";
 import SignOutLinks from "./SignOutLinks";
 import SignInLinks from "./SignInLinks";
 import { Link } from "react-scroll";
-import { NavLink } from "react-router-dom";
-import * as ROUTES from '../../constants/routes'
+import { connect } from 'react-redux'
 
 
-const Nav = () => {
+
+
+
+const Nav = (props) => {
+    console.log(props.auth);
+
+    const links = !props.auth.isEmpty ? <SignInLinks /> : <SignOutLinks />
+
     return (
         <div className="nav-wrapper">
-            <SignOutLinks/>
-            <SignInLinks />
+            { links }
             <div className="site-nav">
                 <ul>
                     <li>
@@ -82,4 +87,12 @@ const Nav = () => {
         </div>
     )
 }
-export default Nav
+
+const mapStateToProps = (state) => {
+
+    return {
+        auth: state.firebase.auth
+    }
+}
+
+export default connect(mapStateToProps)(Nav)

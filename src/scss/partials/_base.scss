@@ -11,3 +11,8 @@ body {
 a {
   text-decoration: none;
 }
+
+.form-error {
+  margin: 10px 0;
+  color: $color-error;
+}

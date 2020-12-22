@@ -6,8 +6,7 @@ import Header from "./components/layout/Header";
 import SignIn from "./components/layout/SignIn";
 import SignUp from "./components/layout/SignUp";
 import SignOut from "./components/layout/SignOut";
-import Footer from "./components/layout/home/Footer";
-import GiveAwayFormMain from "./components/giveAwayForm/giveAwayFormMain";
+import GiveAwayFormMain from "./components/layout/giveAwayForm/giveAwayFormMain";
 
 
 const App = () => {
@@ -15,7 +14,9 @@ const App = () => {
     return (
         <Router>
 
-            <Header/>
+
+            <div className="app">
+
 
             <Switch>
                 <Route exact path={ROUTES.HOME} component={Home}/>
@@ -24,6 +25,8 @@ const App = () => {
                 <Route path={ROUTES.SIGN_OUT} component={SignOut}/>
                 <Route path={ROUTES.FORM_MAIN} component={GiveAwayFormMain}/>
             </Switch>
+                <Header/>
+        </div>
 
         </Router>
     )
