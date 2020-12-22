@@ -51,7 +51,6 @@ const Organizations = ({charities}) => {
                 pageRangeDisplayed={5}
                 onPageChange={handlePageClick}
                 containerClassName={'pagination'}
-                pageClassName={'page'}
                 activeClassName={'active'}
                 previousClassName={'prev'}
                 nextClassName={'next'}

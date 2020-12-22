@@ -1,8 +1,9 @@
-import {getFirebase} from "react-redux-firebase";
+
 
 
 export const signIn = (credentials) => {
-    return (dispatch, getState, {getFirebase, getFirestore}) => {
+
+    return (dispatch, getState, {getFirebase}) => {
         const firebase = getFirebase();
 
         firebase.auth().signInWithEmailAndPassword(
@@ -24,7 +25,8 @@ export const signOut = () => {
         firebase.auth().signOut()
             .then(() => {
                 dispatch({type: 'SIGNOUT_SUCCESS'})
-            });
+            })
+
     }
 }
 

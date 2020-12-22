@@ -2,10 +2,12 @@
 
 @import './settings';
 
+@import "partials/home";
 @import "partials/base";
 @import "partials/toTop";
 @import "partials/nav";
-@import "partials/home";
+@import "partials/header";
+
 @import "partials/homeMain";
 @import "partials/Button";
 @import "partials/mainButtons";
@@ -15,7 +17,8 @@
 @import "partials/giveAway";
 @import "partials/abouteUs";
 @import "partials/signAll";
-
 @import "partials/whoGetHelp";
 @import "partials/contact";
 @import "partials/footer";
+
+@import "partials/giveAwayForm";

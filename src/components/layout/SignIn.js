@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {ReactComponent as Decoration} from '../../assets/Decoration.svg'
-import {Link} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 import * as ROUTES from "../../constants/routes";
 import {useFormik} from "formik";
 import * as Yup from 'yup';
@@ -10,6 +10,7 @@ import {signIn} from '../store/actions/authAction';
 
 const SignIn = (props) => {
 
+    let history = useHistory()
 
     const {handleSubmit, handleChange, values, touched, errors, handleBlur} = useFormik({
         initialValues: {
@@ -21,9 +22,10 @@ const SignIn = (props) => {
             password: Yup.string().min(6, 'Password should be longer than 6 characters').required()
         }),
         onSubmit: () => {
-            // console.log(values);
-            // alert(`Login: ${values.email}, password: ${values.password}`);
-            props.signIn(values)
+
+            props.signIn(values);
+            history.push("/");
+
 
         }
     })
