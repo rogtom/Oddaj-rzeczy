@@ -1,12 +1,16 @@
 import React from "react";
+import Form from "./form";
 
 const FormPageContainer = () => {
 
 
     return (
         <div className="give-away-form-container">
-            <span className="give-away-form-container__step-counter">krok 1/4</span>
-
+            <div className="give-away-form-container__wrapper">
+                <Form />
+            </div>
+            <div className="give-away-form-container__bg"/>
         </div>
     )
 }
+export default FormPageContainer

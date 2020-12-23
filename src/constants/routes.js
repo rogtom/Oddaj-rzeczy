@@ -9,4 +9,6 @@ export const LOCALS = '/local-charity';
 export const FORM_MAIN = '/form-mian'
 export const FORM_1 = '/form-1'
 export const FORM_2 = '/form-2'
+export const FORM_3 = '/form-3'
+export const FORM_4 = '/form-4'
 

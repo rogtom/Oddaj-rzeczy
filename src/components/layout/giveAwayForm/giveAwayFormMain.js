@@ -4,6 +4,7 @@ import {ReactComponent as Decoration} from '../../../assets/Decoration.svg';
 import Contact from "../home/Contact";
 import FormImportantMsg from "./giveAwayFormImpotrtantMsg";
 import HorizontalLinearStepper from "./giveAwayFormContainer";
+import FormPageContainer from "./giveAwayFormContainer";
 
 const GiveAwayFormMain = () => {
 
@@ -48,7 +49,7 @@ const GiveAwayFormMain = () => {
                 </div>
             </div>
             <FormImportantMsg />
-            
+            <FormPageContainer />
             <Contact />
         </div>
 
