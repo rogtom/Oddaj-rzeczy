@@ -1,5 +1,5 @@
 import React from "react";
-import {NavLink, Link, useHistory, Redirect, Route} from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import * as ROUTES from '../../constants/routes'
 import { connect} from "react-redux";
 import {signOut} from "../store/actions/authAction";
@@ -10,11 +10,7 @@ const SignInLinks = (props) => {
     console.log(props);
 
 
-    function handleClick() {
 
-        props.signOut();
-
-    }
 
     return (
         <div className="log-nav">

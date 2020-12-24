@@ -57,7 +57,6 @@ const LocalCharity = ({charities}) => {
                 activeClassName={'active'}
                 previousClassName={'prev'}
                 nextClassName={'next'}
-                pageClassName={'page'}
             />
 
 

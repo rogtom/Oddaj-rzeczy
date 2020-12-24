@@ -8,18 +8,18 @@ export const StepBtn = props => {
     switch (step) {
         case 1 :
             return (
-                <>
+                <div className={"form-btn__wrapper"}>
                     <Buttons
                         text1={'Dalej'}
                         buttonSize={'btn__small'}
                         onClick={props.nextStep}
                     />
 
-                </>
+                </div>
             );
         case 2 :
             return (
-                <>
+                <div className={"form-btn__wrapper"}>
                     <Buttons
                         text1={'Wstecz'}
                         buttonSize={'btn__small'}
@@ -30,11 +30,11 @@ export const StepBtn = props => {
                         buttonSize={'btn__small'}
                         onClick={props.nextStep}
                     />
-                </>
+                </div>
             );
         case 3 :
             return (
-                <>
+                <div className={"form-btn__wrapper"}>
                     <Buttons
                         text1={'Wstecz'}
                         buttonSize={'btn__small'}
@@ -45,11 +45,11 @@ export const StepBtn = props => {
                         buttonSize={'btn__small'}
                         onClick={props.nextStep}
                     />
-                </>
+                </div>
             );
             case 4 :
             return (
-                <>
+                <div className={"form-btn__wrapper"}>
                     <Buttons
                     text1={'Wstecz'}
                     buttonSize={'btn__small'}
@@ -60,17 +60,23 @@ export const StepBtn = props => {
                         buttonSize={'btn__small'}
                         onClick={props.nextStep}
                     />
-                </>
+                </div>
             );
         case 5:
             return (
-                <>
+                <div className={"form-btn__wrapper"}>
+
+                        <Buttons
+                            text1={'Wstecz'}
+                            buttonSize={'btn__small'}
+                            onClick={props.prevStep}
+                        />
                     <Buttons
                         text1={'Gotowe'}
                         buttonSize={'btn__small'}
                         type={'submit'}
                     />
-                </>
+                </div>
             );
         default:
             return <></>;

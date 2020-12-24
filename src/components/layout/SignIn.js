@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import {ReactComponent as Decoration} from '../../assets/Decoration.svg'
 import {Link, useHistory} from "react-router-dom";
 import * as ROUTES from "../../constants/routes";

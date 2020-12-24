@@ -1,11 +1,11 @@
-import React, {useState, useEffect} from "react";
+import React, { useState } from "react";
 import {ReactComponent as Decoration} from '../../../../assets/Decoration.svg'
-import {BrowserRouter as Router, Switch, Route, Link, Redirect} from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom";
 import * as ROUTES from "../../../../constants/routes";
 import { connect } from 'react-redux'
 import Foundations from "./Foundations";
 import Organizations from "./Organizations";
-import Locals from "./Local";
+
 import WhoGetHelpBtns from "./WhoGetHelpBtns";
 import LocalCharity from "./Local";
 

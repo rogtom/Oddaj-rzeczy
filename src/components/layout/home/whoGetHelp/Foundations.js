@@ -57,7 +57,6 @@ const Foundations = ({charities}) => {
                 activeClassName={'active'}
                 previousClassName={'prev'}
                 nextClassName={'next'}
-                pageClassName={'page'}
             />
 
 

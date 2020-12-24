@@ -1,5 +1,5 @@
 import React from "react";
-import ContactBg from '../../../assets/Background-Contact-Form.jpg'
+
 import { ReactComponent as Decoration } from '../../../assets/Decoration.svg'
 import Buttons from "../Buttons";
 import Footer from "./Footer";
