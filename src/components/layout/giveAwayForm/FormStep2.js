@@ -6,8 +6,9 @@ export const FormStep2 = () => {
 
 
     return (
-        <div>
+        <div className={'form-step-2__wrapper'}>
             <h3>Krok 2/4</h3>
+            <h2>Podaj liczbę 60l worków, w które spakowałeś/aś rzeczy:</h2>
             <InputLabel >
                 Liczba 60l worków:
                 {/*<Field type="number" min="0" name="bagNumber" />*/}

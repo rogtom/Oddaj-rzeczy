@@ -98,6 +98,7 @@
     height: 883px;
     position: relative;
   }
+
   .form-main {
     margin-left: 145px;
     display: flex;
@@ -105,6 +106,7 @@
     justify-content: space-between;
     height: 100%;
   }
+
   .form-btn__wrapper {
     display: flex;
     justify-content: space-between;
@@ -113,7 +115,6 @@
     margin-bottom: 70px;
   }
 }
-
 
 
 .form-step-1__wrapper {
@@ -125,6 +126,9 @@
 
   h3 {
     margin: 35px 0 35px 0;
+    font-size: 1.5rem;
+    font-weight: 300;
+
   }
 
   h2 {
@@ -149,30 +153,75 @@
     border: 1px solid $color-dark;
     margin-right: 30px;
   }
+
   input[type="checkbox"]:hover {
     background: $color_light;
   }
+
   input[type="checkbox"]:checked {
     background: $color_yellow;
   }
 }
 
+.form-step-2__wrapper {
+
+  h3 {
+    margin: 35px 0 35px 0;
+    font-size: 1.5rem;
+    font-weight: 300;
+
+  }
+
+  h2 {
+    margin: 35px 0 35px 0;
+    font-size: 36px;
+    font-weight: 600;
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .form-step-2__title {
+    font-size: 2.25rem;
+  }
+
+  select {
+    max-width: 20%;
+    padding: 7px 0;
+    font-size: 1.5rem;
+    background: none;
+    margin: 20px 0;
+  }
+}
+
 .who-get-help-checkbox__wrapper {
-  margin: 20px ;
+  margin: 20px 0;
   display: flex;
+  flex-wrap: wrap;
+
+
+
 
   .who-get-help-checkbox {
     appearance: none;
-    margin: 0 10px;
+    margin: 20px 30px 20px 0;
     border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 300;
+    font-size: 24px;
   }
+
   .checkbox-1:before {
     display: block;
     content: "dzieciom";
     padding: 15px 25px;
+
   }
 
   .checkbox-2:before {
@@ -180,21 +229,25 @@
     content: "samotnym matkom";
     padding: 15px 25px;
   }
+
   .checkbox-3:before {
     display: block;
     content: "bezdomnym";
     padding: 15px 25px;
   }
+
   .checkbox-4:before {
     display: block;
     content: "niepełnosprawnym";
     padding: 15px 25px;
   }
+
   .checkbox-5:before {
     display: block;
     content: "osobom starszym";
     padding: 15px 25px;
   }
+
   .who-get-help-checkbox:hover {
     background: $color-light;
   }
@@ -204,9 +257,10 @@
   }
 
 }
-.who-get-help__organization-name{
-   display: flex;
-   flex-direction: column;
+
+.who-get-help__organization-name {
+  display: flex;
+  flex-direction: column;
 
   label {
     font-size: 24px;
@@ -217,13 +271,20 @@
     margin: 20px 0;
     padding: 5px 0;
     max-width: 60%;
+    font-size: 1.5rem;
+    background: none;
   }
 
- }
+}
 
 .who-get-help__step4 {
   h3 {
-    margin-top: 30px;
+    h3 {
+      margin: 35px 0 35px 0;
+      font-size: 1.5rem;
+      font-weight: 300;
+
+    }
   }
 
   h2 {
@@ -232,20 +293,73 @@
     line-height: 45px;
     margin: 50px 0;
   }
+
   .who-get-help__step4__wrapper {
     display: flex;
     justify-content: space-between;
+
     .who-get-help__adres-wrapper, .who-get-help__date-of-receipt-wrapper {
       width: 45%;
       display: flex;
       flex-direction: column;
       margin-bottom: 100px;
 
-      .date-of-receipt__input {
+      .date-of-receipt__input, textarea {
         padding: 5px 0;
         margin: 10px 0;
+        background: none;
+        font-size: 1.5rem;
+        max-width: 300px;
+        width: 100%;
+
       }
     }
+
   }
+
+  label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.form-summary {
+
+  h2 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    margin: 70px 0 45px 0;
+  }
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 10px 0;
+
+  }
+  .form-summary__give-back__things {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+
+
+
+    .form-summary__things {
+      background: url("../../assets/Icon.png");
+      width: 50px;
+      height: 50px;
+      margin: 15px 40px 15px 0;    }
+
+    .form-summary__location {
+      background: url("../../assets/Icon2.png");
+      width: 50px;
+      height: 50px;
+      margin: 15px 40px 15px 0;
+    }
+
+  }
+
+
+
 
 }

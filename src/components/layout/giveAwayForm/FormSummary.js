@@ -1,51 +1,34 @@
 import React from "react";
-import { List, ListItem, ListItemText } from '@material-ui/core/';
 
 
 export const FormSummary = (props) => {
 
-    const { values } = props;
+    const {values} = props;
     return (
         <>
-            <div>
-                <List>
-                    <ListItem>
-                        <ListItemText
-                            primary='Co oddajesz?'
-                            secondary={values.whatToGiveCheck.map((el, i ) => <p key={i}>{el}</p>)}
-                        />
-                    </ListItem>
-                    <ListItem>
-                        <ListItemText
-                            primary='Liczba worków'
-                            secondary={values.bagNumber}
-                        />
-                    </ListItem>
-                    <ListItem>
-                        <ListItemText
-                            primary='Lokalizacja'
-                            secondary={values.location}
-                        />
-                    </ListItem>
-                    <ListItem>
-                        <ListItemText
-                            primary='Kto dostanie'
-                            secondary={values.whoGetCheck.map((el,i) => <p key={i}>{el}</p>)}
-                        />
-                    </ListItem>
-                    <ListItem>
-                        <ListItemText
-                            primary='Nazwa organizacji'
-                            secondary={values.organizationName}
-                        />
-                    </ListItem>
-                    <ListItem>
-                        <ListItemText
-                            primary='State'
-                            // secondary={state}
-                        />
-                    </ListItem>
-                </List>
+            <div className={'form-summary'}>
+                <h2>Podsumowanie Twojej darowizny</h2>
+
+                <div className={'form-summary__give-back'}>
+
+                    <h3>Oddajesz:</h3>
+                    <div className={'form-summary__give-back__things'}>
+                        <div className={'form-summary__things'}/>
+                        <span>{values.bagNumber} worki, {values.whatToGiveCheck.map((el, i) => <span
+                            key={i}>{el}, </span>)}
+                            {values.whoGetCheck.map((el, i) => <span key={i}>{el}, </span>)}</span>
+
+                    </div>
+                    <div className={'form-summary__give-back__things'}>
+                        <div className={'form-summary__location'}/>
+                        <span>dla lokalizacji: {values.location}, </span>
+                        {values.organizationName.length !== 0 && <span>Organizacja: {values.organizationName}</span>}
+                    </div>
+                    <div>
+
+                    </div>
+
+                </div>
             </div>
         </>
     );
