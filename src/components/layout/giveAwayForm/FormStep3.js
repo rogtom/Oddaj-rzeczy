@@ -1,19 +1,6 @@
 import React from "react";
 import {Field} from "formik";
-import {
-    Box,
-    Button,
-    Card,
-    CardContent,
-    Checkbox,
-    CheckboxProps,
-    FormControlLabel,
-    FormGroup,
-    MenuItem,
-    TextField,
-    Typography
-}
-    from '@material-ui/core';
+
 
 
 export const FormStep3 = (props) => {
@@ -22,13 +9,15 @@ export const FormStep3 = (props) => {
     return (
         <div>
             <h1>Krok 3/4</h1>
-            <Field name="location" as={TextField} select label={"lokalizacja:"}>
 
-                <MenuItem value={"Warszawa"}>Warszawa</MenuItem>
-                <MenuItem value={"Kraków"}>Kraków</MenuItem>
-                <MenuItem value={"Katowice"}>Katowice</MenuItem>
-                <MenuItem value={"Poznań"}>Poznań</MenuItem>
-                <MenuItem value={"Wrocław"}>Wrocław</MenuItem>
+            <Field name="location" as={'select'} >
+
+                <option value={" "}>Wybierz lokalizacje...</option>
+                <option value={"Warszawa"}>Warszawa</option>
+                <option value={"Kraków"}>Kraków</option>
+                <option value={"Katowice"}>Katowice</option>
+                <option value={"Poznań"}>Poznań</option>
+                <option value={"Wrocław"}>Wrocław</option>
             </Field>
 
             <div className={'who-get-help-checkbox__wrapper'}>

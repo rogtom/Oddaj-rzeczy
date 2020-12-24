@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import {Formik, Form} from "formik";
-import {makeStyles} from "@material-ui/core/styles";
-import { Box, Button, Card, CardContent, Checkbox, CheckboxProps, FormControlLabel, FormGroup, MenuItem, TextField, Typography } from '@material-ui/core';
+
 import {FormStep1} from "./FormStep1";
 import {FormStep2} from "./FormStep2";
 import {FormStep3} from "./FormStep3";
@@ -10,14 +9,6 @@ import {StepBtn} from "./StepBtn";
 import {FormSummary} from "./FormSummary";
 
 
-const useStyles = makeStyles(theme => ({
-    form: {
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center"
-    }
-}));
 
 const renderStep = (step, values, errors, touched ) => {
     switch (step) {
@@ -40,7 +31,7 @@ const renderStep = (step, values, errors, touched ) => {
 const GiveAwayForm = () => {
 
     const [step, setStep] = useState(1);
-    const classes = useStyles();
+    // const classes = useStyles();
     const formData = {
         whatToGiveCheck: [],
         bagNumber: "",
@@ -60,7 +51,7 @@ const GiveAwayForm = () => {
     const handleSubmit = () => {}
 
     return (
-        <div style={{width: "50vw"}}>
+        <div style={{width: "50vw", height: "100%"}}>
             <Formik
                 enableReinitialize
                 initialValues={{...formData}}
@@ -68,7 +59,7 @@ const GiveAwayForm = () => {
                 // validate={validate}
             >
                 {({values, errors, touched,handleChange}) => (
-                    <Form className={classes.form}>
+                    <Form className={'form-main'}>
                         {renderStep(step, values, errors, touched, handleChange)}
                         <StepBtn step={step} nextStep={handleNextStep} prevStep={handlePrevStep}/>
                     </Form>

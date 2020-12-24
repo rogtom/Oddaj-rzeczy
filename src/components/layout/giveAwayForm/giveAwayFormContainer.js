@@ -7,9 +7,11 @@ const FormPageContainer = () => {
     return (
         <div className="give-away-form-container">
             <div className="give-away-form-container__wrapper">
+
+            </div>
+            <div className="give-away-form-container__bg">
                 <Form />
             </div>
-            <div className="give-away-form-container__bg"/>
         </div>
     )
 }

@@ -8,6 +8,7 @@ export const FormStep1 = (props) => {
     return (
         <div className={'form-step-1__wrapper'}>
             <h3>Krok 1/4</h3>
+            <h2>Zaznacz co chcesz oddać:</h2>
             <label>
                 <Field type="checkbox" name="whatToGiveCheck" value="ubrania, które nadają się do ponownego użycia" />
                 ubrania, które nadają się do ponownego użycia

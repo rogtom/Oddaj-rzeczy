@@ -1,9 +1,9 @@
 import React from "react";
-import Header from "../Header";
+
 import {ReactComponent as Decoration} from '../../../assets/Decoration.svg';
 import Contact from "../home/Contact";
 import FormImportantMsg from "./giveAwayFormImpotrtantMsg";
-import HorizontalLinearStepper from "./giveAwayFormContainer";
+
 import FormPageContainer from "./giveAwayFormContainer";
 
 const GiveAwayFormMain = () => {
@@ -14,7 +14,9 @@ const GiveAwayFormMain = () => {
 
         <div className="give-away-form-main">
             <div className='give-away-form-main__wrapper'>
-                <div className="give-away-form__bg"/>
+                <div className="give-away-form__bg">
+
+                </div>
                 <div className="give-away-form__text-content">
                     <h2 className="give-away-form__text-content-title">Oddaj rzeczy, których już nie chcesz
                         POTRZEBUJĄCYM</h2>
