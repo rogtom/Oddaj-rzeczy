@@ -55,7 +55,6 @@ const GiveAwayForm = (props) => {
     };
     const handleNextStep = () => setStep(step => step + 1);
     const handlePrevStep = () => setStep(step => step - 1);
-    const history = useHistory();
     const handleSubmit = (values) => {
         // console.log(values)
         props.saveFormToFirestore(values, props.auth.uid)
