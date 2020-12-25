@@ -24,8 +24,38 @@ export const FormSummary = (props) => {
                         <span>dla lokalizacji: {values.location}, </span>
                         {values.organizationName.length !== 0 && <span>Organizacja: {values.organizationName}</span>}
                     </div>
-                    <div>
-
+                    <div className={'form-summary__details'}>
+                        <div>
+                            <h3>Adres odbioru:</h3>
+                            <ul className={'form-summary__address'}>
+                                <li><span
+                                    className={'form-summary__address__title'}>Ulica</span><span>{values.street}</span>
+                                </li>
+                                <li><span
+                                    className={'form-summary__address__title'}>Miasto</span><span>{values.city}</span>
+                                </li>
+                                <li><span
+                                    className={'form-summary__address__title'}>Kod pocztowy</span><span>{values.zipCode}</span>
+                                </li>
+                                <li><span
+                                    className={'form-summary__address__title'}>Numer telefonu</span><span>{values.phone}</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Termin odbioru:</h3>
+                            <ul className={'form-summary__address'}>
+                                <li><span
+                                    className={'form-summary__address__title'}>Data </span><span>{values.date}</span>
+                                </li>
+                                <li><span
+                                    className={'form-summary__address__title'}>Godzina </span><span>{values.hour}</span>
+                                </li>
+                                <li><span
+                                    className={'form-summary__address__title'}>Uwagi dla kuriera </span><span>{values.comments}</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
 
                 </div>

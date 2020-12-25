@@ -29,6 +29,7 @@ export const FormStep1 = (props) => {
                 <Field type="checkbox" name="whatToGiveCheck" value="Inne" />
                 Inne
             </label>
+
         </div>
     )
 }

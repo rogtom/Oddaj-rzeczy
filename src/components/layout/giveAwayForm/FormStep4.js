@@ -50,7 +50,7 @@ export const FormStep4 = () => {
                 <label>
                     Dodatkowe informacje
                     <Field as={'textarea'} name={"comments"}
-                           className={'date-of-receipt__input'} rows={5}/>
+                           className={'date-of-receipt__area'} rows={5}/>
                 </label>
                 </div>
             </div>

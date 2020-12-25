@@ -11,7 +11,7 @@ const SIZE = [
     'btn__big'
 ]
 
-const Buttons = ({text1, text2, type, onClick, buttonStyle, buttonSize, color }) => {
+const Buttons = ({text1, text2,  onClick, buttonStyle, buttonSize, }) => {
 
     const checkStyle = STYLES.includes(buttonStyle) ? buttonStyle : STYLES[0];
 
@@ -19,7 +19,7 @@ const Buttons = ({text1, text2, type, onClick, buttonStyle, buttonSize, color })
 
     return (
 
-        <button className={`btn ${checkStyle} ${checkSize}`} onClick={onClick} type={type} ><span>{text1}</span><span>{text2}</span></button>
+        <button className={`btn ${checkStyle} ${checkSize}`} onClick={onClick}  ><span>{text1}</span><span>{text2}</span></button>
     )
 }
 
