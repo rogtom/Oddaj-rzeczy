@@ -31,19 +31,19 @@ const GiveAwayFormMain = () => {
                         </div>
                         <div className="give-away-form__steps-square">
                             <div className="give-away-form__steps-texts">
-                                <span>1</span>
+                                <span>2</span>
                                 <p>{`Wybierz \nrzeczy`}</p>
                             </div>
                         </div>
                         <div className="give-away-form__steps-square">
                             <div className="give-away-form__steps-texts">
-                                <span>1</span>
+                                <span>3</span>
                                 <p>{`Wybierz \nrzeczy`}</p>
                             </div>
                         </div>
                         <div className="give-away-form__steps-square">
                             <div className="give-away-form__steps-texts">
-                                <span>1</span>
+                                <span>4</span>
                                 <p>{`Wybierz \nrzeczy`}</p>
                             </div>
                         </div>
