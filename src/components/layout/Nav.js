@@ -9,7 +9,7 @@ import { connect } from 'react-redux'
 
 
 const Nav = (props) => {
-    console.log(props.auth);
+    // console.log(props.auth);
 
     const links = !props.auth.isEmpty ? <SignInLinks /> : <SignOutLinks />
 

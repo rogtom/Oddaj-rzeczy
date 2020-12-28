@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
 import ReactPaginate from 'react-paginate';
+import { connect } from 'react-redux'
 
 import WhoGetHelpCard from "./WhoGetHelpCard";
 
 
 const Foundations = ({charities}) => {
-    console.log(charities.charities)
+    // console.log(charities)
 
     const [pagination, setPagination] = useState({
-        data: charities.charities.foundations.foundationsList,
+        data: charities.foundations.foundationsList,
         offset: 0,
         numberPerPage: 3,
         pageCount: 0,
@@ -63,4 +64,9 @@ const Foundations = ({charities}) => {
         </>
     )
 }
-export default Foundations
+
+const mapStateToProps = (state) => ({
+    charities: state.charity.charityList
+})
+
+export default connect(mapStateToProps)(Foundations)

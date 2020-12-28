@@ -7,7 +7,7 @@ import {signOut} from "../store/actions/authAction";
 
 
 const SignInLinks = (props) => {
-    console.log(props);
+    // console.log(props);
 
 
 

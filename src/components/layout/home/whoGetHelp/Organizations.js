@@ -3,10 +3,12 @@ import WhoGetHelpCard from "./WhoGetHelpCard";
 import ReactPaginate from "react-paginate";
 
 
-const Organizations = ({charities}) => {
+const Organizations = (props) => {
+
+    console.log(props.charities.charities.organizations.organizationList);
 
     const [pagination, setPagination] = useState({
-        data: charities.charities.organizations.organizationList,
+        data: props.charities.charities.organizations.organizationList,
         offset: 0,
         numberPerPage: 3,
         pageCount: 0,

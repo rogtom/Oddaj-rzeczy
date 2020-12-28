@@ -11,6 +11,7 @@ import LocalCharity from "./Local";
 
 
 const WhoGetHelp = (props) => {
+    // console.log(props)
 
     const [isActive, setIsActiv] = useState(true)
     return (
@@ -22,10 +23,11 @@ const WhoGetHelp = (props) => {
 
 
                 <Switch>
-                    <Route exact path={ROUTES.HOME} render={() => isActive && <Redirect to={ROUTES.FOUNDATIONS}/>}/>
-                    <Route path={ROUTES.FOUNDATIONS} render={() => <Foundations charities={props}/>}/>
-                    <Route path={ROUTES.ORGANIZATIONS} render={() => <Organizations charities={props}/>}/>
-                    <Route path={ROUTES.LOCALS} render={() => <LocalCharity charities={props}/>}/>
+                    {/* <Route exact path={ROUTES.HOME} render={() => <Foundations charities={[]}/>}/> */}
+                    {/* <Route exact path={ROUTES.HOME} render={() => isActive && <Redirect to={ROUTES.FOUNDATIONS}/>}/> */}
+                    <Route exact path={ROUTES.FOUNDATIONS} render={() => <Foundations charities={props}/>}/>
+                    <Route exact path={ROUTES.ORGANIZATIONS} render={() => <Organizations charities={props}/>}/>
+                    <Route exact path={ROUTES.LOCALS} render={() => <LocalCharity charities={props}/>}/>
 
 
                 </Switch>
